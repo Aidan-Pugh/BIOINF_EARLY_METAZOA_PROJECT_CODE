@@ -1,4 +1,4 @@
-# Newick trees resulting from phylogenetic construction
+# Trees resulting from phylogenetic construction (Newick format)
 
 ### Single gene trees:
 - 18S_gene_tree.contree
