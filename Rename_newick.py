@@ -8,14 +8,15 @@ import os
 def get_classification_genus_species(line_in, classification_dict):
     """
     Take in a line, extract the classification and the species, and add this info to a dictionary.
+    This assumes that your first portion of your headers follow a specific format.
     
-    E.g: get_classification_genus_species(">SCINCIDAE_Ablepharus_bivittatus", family_dictionary)
-         print(family_dictionary)
-         {"SCINCIDAE" : "Ablepharus_bivittatus"}
+    E.g: get_classification_genus_species(">ORDER_Species_name", order_dictionary)
+         print(order_dictionary)
+         {"ORDER" : "Species_name"}
          
     """
     # Pattern of the fasta file
-    pattern = r"^>([A-Z]+)_(\w+)$" # Assumes the following: >FAMILY_Species_name
+    pattern = r"^>([A-Z]+)_(\w+)$" # Assumes the following: >ORDER_Species_name
     match = re.match(pattern, line_in)
     
     # extract the classification and the species name
@@ -32,10 +33,10 @@ def get_classification_genus_species(line_in, classification_dict):
             
 def fill_dictionary(fasta_file, classification_dict):
     """
-    Look through the fasta_file and extract all the species names into collection of families
+    Look through the fasta_file and extract all the species names into collection of orders
     
-    E.g: {"FamilyA" : ["Species_a", "Species_b", "Species_c"],
-          "FamilyB" : ["Species_d", "Species_e", "Species_f"]...}
+    E.g: {"orderA" : ["Species_a", "Species_b", "Species_c"],
+          "orderB" : ["Species_d", "Species_e", "Species_f"]...}
     """
     with open(fasta_file) as read:
         for line in read:
@@ -45,7 +46,7 @@ def fill_dictionary(fasta_file, classification_dict):
 def update_and_write(tree_file, classification_dict_full):
     """
     tree_file is the name of newickfile you are editing
-    classification_dict_full is the dictionary where family and species info was stored
+    classification_dict_full is the dictionary where order and species info was stored
     
     This function writes everything to a new file
     """
@@ -71,7 +72,7 @@ tree_file = "Newick_backbone.txt"
 #This is the name of your final and updated newick format - change if you want but this is fine as is
 new_file = "0_Backbone_tree_species_level.txt"
 
-# This is the concatenated data with the families appended on the front
+# This is the concatenated data with the orders appended on the front
 fasta_file = "concat_data.fas"
 
 
@@ -79,14 +80,14 @@ fasta_file = "concat_data.fas"
 ### 3. SCRIPT - DO NOT EDIT ANY OF THIS SECTION ###
 ###################################################
 
-family_dict = {}
+order_dict = {}
 
-fill_dictionary(fasta_file, family_dict)
-print(len(family_dict))
-print(sum(len(values) for values in family_dict.values()))
+fill_dictionary(fasta_file, order_dict)
+print(len(order_dict))
+print(sum(len(values) for values in order_dict.values()))
 
 with open(new_file, "w") as file:
-    file.write(update_and_write(tree_file, family_dict))
+    file.write(update_and_write(tree_file, order_dict))
     
 print(">>>> Written to a new file <<<<")
 print(f">>>> Load the new_file into FigTree to make sure it's correct <<<<")
