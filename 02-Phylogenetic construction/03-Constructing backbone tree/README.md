@@ -1,4 +1,4 @@
-# All files necessary to construct a constraint backbone tree, with the fianl constraint tree included
+# All files necessary to construct a constraint backbone tree, with the final constraint tree included
 
 ### Scripts:
 - 01_Extract_orders.py: Searches the fasta file that will be used in the constrained analysis and creates a .txt file containing all the orders
