@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Run mafft on all files:
 for i in *.fas
 do
