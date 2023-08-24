@@ -1,0 +1,2 @@
+!MRCA='BEROIDA Beroe cucumis-MALACALCYONACEA Xenia lepida' TaxonA='BEROIDA Beroe cucumis' TaxonB='MALACALCYONACEA Xenia lepida' Distribution=normal mean=591.50000000 stddev=8.93000000 calibrationName='BEROIDA Beroe cucumis-MALACALCYONACEA Xenia lepida-split';
+!MRCA='BIVALVULIDA Henneguya jocu-MALACALCYONACEA Xenia lepida' TaxonA='BIVALVULIDA Henneguya jocu' TaxonB='MALACALCYONACEA Xenia lepida' Distribution=normal mean=561.30000000 stddev=15.05000000 calibrationName='BIVALVULIDA Henneguya jocu-MALACALCYONACEA Xenia lepida-split';

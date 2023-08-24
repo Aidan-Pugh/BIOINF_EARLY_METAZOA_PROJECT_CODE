@@ -1,0 +1,66 @@
+;   MEGA 11 (Molecular Evolutionary Genetics Analysis)
+;
+;   Suggested Citation for MEGA 11:
+;
+;   Tamura K, Stecher G, and Kumar S.
+;   MEGA11: Molecular Evolutionary Genetics Analysis version 11.
+;   Molecular Biology and Evolution (2021) 38:3022-3027
+
+[Application Info]
+
+	Version                                 = 11.0.13
+	Build                                   = 11220624-x86_64
+	User Interface                          = Graphical
+	Operating System                        = windows
+
+[General Info]
+
+	Data Type                               = nucleotide (non-coding)
+	No. of Taxa                             =     2964
+	No. of Sites                            =     2652
+	Data File                               = 
+
+[Analysis Settings]
+
+	Tree to Use                             = Use tree from file
+	User Tree File                          = C:\Users\mz22699\Documents\Bioinf Project\Bamm tools\RELTIME cteno cnid\take two as this got fucked\RELTIME\cteno_cnid_tree.contree
+	Clock Type                              = Local clocks
+	Variance Estimation Method              = Analytical method
+	Statistical Method                      = Maximum Likelihood
+	Substitutions Type                      = Nucleotide
+	Model/Method                            = Tamura=Nei model
+	Rates among Sites                       = Uniform Rates
+	Gaps/Missing Data Treatment             = Use all sites
+	Select Codon Positions                  = 1st,2nd,3rd,Non-Coding
+	Number of Threads                       = 4
+
+[Analysis Statistics]
+
+	Start Time                              = 22/08/2023 16:08:31
+	End Time                                = 22/08/2023 17:39:11
+	Execution Time                          = 5439.753 (seconds)
+	Peak Memory Used(Working Set)           =  665.613 (MB)
+	Sum of branch lengths                   =    8.673
+	Model                                   = Tamura-Nei (1993) model
+	Num of params                           =     5930
+	Num of rates                            =        1
+	AICc                                    = 853291.376
+	BIC                                     = 930608.561
+	LnL                                     = -420705.352
+	Invar                                   = n/a
+	Gamma                                   = n/a
+	Ts/Tv                                   =    1.380
+	r(A->T)                                 = 0.063826468540756
+	r(A->C)                                 = 0.0373493647489334
+	r(A->G)                                 = 0.102416732956297
+	r(T->A)                                 = 0.0541192061445097
+	r(T->C)                                 = 0.138755708467235
+	r(T->G)                                 = 0.0489975521502914
+	r(C->A)                                 = 0.0541192061445097
+	r(C->T)                                 = 0.237120147045799
+	r(C->G)                                 = 0.0489975521502914
+	r(G->A)                                 = 0.113122228361689
+	r(G->T)                                 = 0.063826468540756
+	r(G->C)                                 = 0.0373493647489334
+	CorrTest Score                          = 2.23E-002
+	CorrTest P-value                        = p-value > 0.05
